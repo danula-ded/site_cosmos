@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #fafafa;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+}
+
+header{
+    width: 100%;
+    padding: 10px 0.5% 0px 0,5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+}
+
+header #logo{
+    color: #fff;
+    cursor: pointer;
+}
+
+header #logo span{
+    font-size: 1.7em;
+    line-height: 45px;
+    margin-left: 40px;
+    font-family: 'Roboto', serif;
+}
+
+/* Настройка ссылок */ 
+
+#about{
+    text-align: center;
+    font-size: 1em;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+#about > a {color: #fff;}
+
+#about > a:hover {
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
+#about > a:not(:last-child) {margin-right: 7%;}
+
+/* Небольшая адаптивность */ 
+
+@media (min-width: 701px) {
+    #logo{
+        float: left;
+        width: 30%;
+        font-size: 1.1em;
+    }
+
+    #about{
+        float: right;
+        width: 67%;
+    }
+}
+
+@media (max-width: 700px) {
+    #logo{
+        text-align: center;
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    #about{
+        float: left;
+        width: 100%;
+    }
+}
+
+/*Стили для фиксирования шапки сверху*/
+
+.fixed{
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+header.fixed #logo {
+    color: #343434;
+}
+
+.fixed #about a {color: #343434;}
+.fixed #about a {color: #7c7c7c;}
+
+/* Главный блок на сайте */
+
+#top {
+    width: 100%;
+    background-image: url(https://i.pinimg.com/originals/cc/61/f0/cc61f02aad6588fac5ba10f32c3298c2.jpg);
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+}
+
+@media (min-width: 1001px) {
+    #top{
+        font-size: 3em;
+        padding-top: 15%;
+        height: 1000px;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 701px) {
+    #top{
+        font-size: 2em;
+        padding-top: 25%;
+        height: 600px;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 431px) {
+    #top{
+        font-size: 1.5em;
+        padding-top: 40%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 430px) {
+    #top{
+        font-size: 0.7em;
+        padding-top: 85%;
+        height: 300px;
+    }
+}
+
+#top h3 {color: #ccc;}
+
+/* Блок с возможностями */
+
+#main{
+    padding: 100px 20%;
+    width: 60%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid silver;
+    color: #484848;
+    
+}
+
+#main h2{font-size: 3em}
+#main span {color: #a0a0a0;}
+
+#main div {
+    width: 40%;
+    margin-right: 2%;
+    float: left;
+}
+
+@media (min-width: 1401px) {
+    #main {
+        padding: 100px 20%;
+        width: 60%;
+    }
+
+}
+@media (max-width: 1400px) {
+    #main {
+        padding: 100px 10%;
+        width: 80%;
+    }
+}
+@media (max-width: 700px) {
+    #main div{    
+        width: 98%!important;
+        margin-bottom: 20px;
+    }
+    #main h2{font-size: 1.5em}
+}
+
+/* Блок Картинки*/
+
+#overview {
+    float: left;
+    background-blend-mode: multiply;
+    background-color: #333d46;
+    background-image: url(https://get.pxhere.com/photo/light-star-line-reflection-space-circle-outer-space-astronomy-symmetry-astronomical-object-atmosphere-of-earth-155686.jpg);
+    background-position: center;
+
+    padding: 100px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#overview h2{font-size: 4em;}
+#overview h4{color: #ccc; font-size: 1.5em;}
+
+#overview .img {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+
+#overview .img:nth-child(odd){
+    margin-left: 18%;
+}
+
+#overview img {
+    float: left;
+    width: 100%;
+    max-width: 500px;
+    background-color: #fafafa;
+    padding: 5px;
+    border: 2px solid silver;
+}
+
+#overview span {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    #overview .img {
+        width: 80%!important;
+        margin-right: 0!important;
+        margin-left: 10%!important;
+    }
+    #overview span{
+        font-size: 1em;
+    }
+}
+
+/* Блок Обратная связь */
+
+#contacts {
+    width: 100%;
+    float: left;
+    padding-bottom: 40px;
+    padding-top: 70px;
+    border-top: 4px solid #fff;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+}
+
+#contacts h5 {font-size: 3em; color: #4f4f4f;}
+
+#form_input {
+    margin-top: 15px;
+    width: 50%;
+    margin-left: 20%;
+    font-size: 1.1em;
+}
+
+#form_input label {
+    color: #505050;
+    cursor: pointer;
+    font-size: 1.4em;
+    font-family: 'Roboto Slab', serif;
+}
+
+#form_input label > span {
+    color: #e87e7e;
+}
+
+#form_input input, #form_input textarea {
+    margin-bottom: 10px;
+    width: 70%;
+    padding: 10px 2%;
+    border-radius: 7px;
+    border: 2px solid silver;
+    font-size: 0.9em;
+    color: #4a4a4a;
+}
+
+#form_input input:focus, #form_input textarea:focus {
+    border-color: #333;
+}
+
+.btn {
+    float: left;
+    border-radius: 5px;
+    padding: 5px 9px;
+    font-size: 1.2em;
+    background-color: #ec6550;
+    text-shadow: #454545 0 0 2px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+.btn:hover {
+    background-color: #c15443;
+}

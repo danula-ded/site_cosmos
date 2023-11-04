@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>WEB</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Интересный факт" onclick="slowScroll('#main')">Интересный факт</a>
+            <a href="#" title="Космос" onclick="slowScroll('#overview')">Космос</a>
+            <a href="#" title="Обратная связь" onclick="slowScroll('#contacts')">Обратная связь</a>
+        </div>
+    </header> 
+
+    <div id="top">
+        <h1>Програмирование</h1>
+        <h3>Это сложно, но интересно!!</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>Космос - Круто!</h2>
+            <span>Поехали во Вселенную!!</span>
+        </div>
+        <div class="text">
+            <h2>Интересный факт!</h2>
+            <span>Предположительно темная материя составляет 25%, темная энергия 70%, а барионная (обычная) материя всего 5% всей массы нашей вселенной.</span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Космос</h2>
+        <h4>- Это красиво</h4>
+
+        <div class="img">
+            <img src="https://w-dog.ru/wallpapers/2/18/487201292087199/sinij-zvezdy-planety.jpg" alt="">
+            <span>Рассвет на других планетах</span>
+        </div>
+        <div class="img">
+            <img src="https://i.yapx.cc/QLJo0.jpg" alt="">
+            <span>Туманности</span>
+        </div>
+        <div class="img">
+            <img src="https://foni.club/uploads/posts/2023-02/1675395142_foni-club-p-fon-krasivii-zadnii-kosmosa-dlya-fotoshopa-49.jpg" alt="">
+            <span>Белая звезда</span>
+        </div>
+        <div class="img">
+            <img src="https://w-dog.ru/wallpapers/1/81/325220843814070/art-kosmos-3d.jpg" alt="">
+            <span>Далекий закат</span>
+        </div>
+    </div>
+
+    <div id="contacts">
+        <center><h5>Обратная связь</h5></center>
+        <form id="form_input">
+            <label for="name">Имя <span>*</span></label>
+            <br> 
+            <input type="text" placeholder="Введите имя" name="name" id="name"> 
+            <br>
+            <label for="email">Ваша почта <span>*</span></label>
+            <br>
+            <input type="email" placeholder="Введите email" name="email"id="email">
+            <br> 
+            <label for="message">Сообщение <span>*</span></label>
+            <br>
+            <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea>
+            <br> 
+            <div id="mess_send" class="btn">Отправить</div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      function slowScroll(id) {
+        $('html, body').animate({
+          scrollTop: $(id).offset().top
+        }, 500);
+      }
+  
+      $(document).on("scroll", function () {
+        if($(window).scrollTop() === 0)
+          $("header").removeClass("fixed");
+        else
+          $("header").attr("class", "fixed");
+      });
+    </script>
+</body>
+</html>
